@@ -9,4 +9,24 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  isViewButtonClicked : boolean = false;
+  persons : {name: string, age: number}[] = [
+    {
+      name: 'Heshan',
+      age: 27
+    },
+    {
+      name: 'Kavinda',
+      age: 34
+    },
+    {
+      name: 'Tharindu',
+      age: 45
+    }
+  ]
+
+  onClickView(){
+    this.isViewButtonClicked = !this.isViewButtonClicked;
+  }
+
 }
