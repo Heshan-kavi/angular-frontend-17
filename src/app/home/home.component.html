@@ -1,1 +1,26 @@
 <p>home works!</p>
+    @if(!isViewButtonClicked && persons.length > 0){
+        <h3>nothing to show here</h3>
+    }@else {
+        <h3>there are names to show here</h3>
+        <ul>
+            @for (person of persons; track person.name) {
+              <li>{{ person.name }} is {{ person.age }} years old.</li>
+            }
+        </ul>
+          
+    }
+
+    @switch (isViewButtonClicked) {
+
+        @case (true) {
+            <h2>this is from the switch component</h2>
+        }
+
+        @default {
+            <h3>this is from the swich componentn's default part</h3>
+        }
+
+    }
+     
+<button (click)="onClickView()">click to view</button>
