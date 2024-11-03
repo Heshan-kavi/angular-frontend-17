@@ -1,5 +1,7 @@
 <p>home works!</p>
-    @if(!isViewButtonClicked && persons.length > 0){
+
+    <!-- implemented control flow -->
+    <!-- @if(!isViewButtonClicked && persons.length > 0){
         <h3>nothing to show here</h3>
     }@else {
         <h3>there are names to show here</h3>
@@ -21,6 +23,54 @@
             <h3>this is from the swich componentn's default part</h3>
         }
 
-    }
+    } -->
+
+
+
+    <!-- implemented defferables -->
+
+    <!-- @defer{
+        <h2>this is will be print after the placeholder</h2>
+    }@placeholder (minimum 1000ms) {
+        <h3>this is the placeholder</h3>
+    } -->
+
+    <!-- @defer {
+        <h2>this is the content</h2>
+    } @loading (after 1000ms; minimum 1s) {
+        <h1>this is the loading screen</h1>
+    } -->
+
+
+    <!-- deffer with timer -->
+    <!-- @defer (on timer(1000ms)) {
+        <h3>this is the content after the placeholder</h3>
+    }@placeholder {
+        <h5>this is the placeholder for the timer function</h5>
+    } -->
+
+    <!-- deffer with onviewport -->
+     <!-- <h3 #headerPart>this is the header part for the interaction part</h3>
+     @defer (on interaction(headerPart)) {
+        <h3>this part is coming from the interaction part</h3>
+     }@placeholder {
+        <h4>this part is coming from the placehlder</h4>
+     } -->
+
+     <!-- deffer with hover -->
+     <!-- <h3 #differHeader>this is the header part for the hover part</h3>
+     @defer (on hover(differHeader)) {
+        <h3>this part is coming from the hover part</h3>
+     }@placeholder {
+        <h4>this part is coming from the placeholder</h4>
+     } -->
+
+     <!-- deffer with when -->
+     <!-- @defer(when isViewButtonClicked){
+        <h2>this is the header part when the isViewButtonClicked is true</h2>
+     } -->
+
+     <!-- deffer with prefetch idle -->
+      
      
 <button (click)="onClickView()">click to view</button>
